@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Helpers</name>
+    </assembly>
+    <members>
+        <member name="M:Helpers.Extension.With``2(``0,System.Func{``0,``1})">
+            <summary>
+            Check for null and execute function.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="o">The object.</param>
+            <param name="evaluator">The evaluator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.Extension.Return``2(``0,System.Func{``0,``1},``1)">
+            <summary>
+            Returns the result of evaluator.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="o">The object.</param>
+            <param name="evaluator">The evaluator.</param>
+            <param name="failValue">The fail value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.Extension.ReturnSuccess``1(``0,``0)">
+            <summary>
+            Returns true if result not failValue(null).
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="o">The object.</param>
+            <param name="failValue">The fail value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.Extension.ReturnSuccess``1(``0,``0@,``0)">
+            <summary>
+            Returns true if result not failValue(null) and out value.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="o">The object.</param>
+            <param name="result">The result.</param>
+            <param name="failValue">The fail value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.Extension.If``1(``0,System.Predicate{``0})">
+            <summary>
+            If object is null or evaluator returns false, return null, else object.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="o">The object.</param>
+            <param name="evaluator">The evaluator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.Extension.Do``1(``0,System.Action{``0})">
+            <summary>
+            Does the specified action.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="o">The o.</param>
+            <param name="action">The action.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.ThrowHelper.Check``1(``0,System.Predicate{``0},System.Exception)">
+            <summary>
+            Checks the specified predicate and throw exception.
+            </summary>
+            <param name="predicate">The predicate. Rerurn false for throw exception. </param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Helpers.ThrowHelper.NotNull``1(``0,System.ArgumentNullException)">
+            <summary>
+            Nots the null.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="exception">The exception.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.ThrowHelper.NotNull``1(``0,System.String,System.String)">
+            <summary>
+            Nots the null.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">The object.</param>
+            <param name="name">The param's name.</param>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Helpers.ThrowHelper.NotEmpty(System.String,System.String,System.String)">
+            <summary>
+            Nots the empty. Throw ArgumentNullException.
+            </summary>
+            <param name="str">The string.</param>
+            <param name="paramName">Name of the parameter.</param>
+            <param name="message">The message.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Helpers.ThrowHelper.NotEmptyOrSpaces(System.String,System.String,System.String)">
+            <summary>
+            Nots the empty or spaces. Throw ArgumentNullException.
+            </summary>
+            <param name="str">The string.</param>
+            <param name="paramName">Name of the parameter.</param>
+            <param name="message">The message.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>
